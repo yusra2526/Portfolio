@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const seeMoreButtons = document.querySelectorAll(".see-more");
+
+            seeMoreButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const contentText = this.parentNode.querySelector(".content-description");
+                    contentText.classList.toggle("visible");
+                    this.textContent = contentText.classList.contains("visible") ? "See Less" : "See More";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">Yusra Zainab</a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+    <section class="punchline">
+      <h1>Crafting Code and Chasing Bugs, </br> One Line at a Time! 🖥️✨</h1>
+    </section>
+
+    <section id="about" class="content-blocks">
+      <div class="content">
+        <div class="content-text">
+          <h2>About Me</h2>
+          <p class="content-description">Hi! I am Yusra Zainab, a passionate web developer. I love creating beautiful and functional websites.</p>
+          <button class="see-more">See More</button>
+        </div>
+        <img src="images/art.png" alt="Art" class="content-image">
+      </div>
+
+      <div class="content">
+        <img src="images/academics.png" alt="Academics" class="content-image">
+        <div class="content-text">
+          <h2>Academics</h2>
+          <p class="content-description">
+                Bachelor of Engineering in Software Engineering, </br>National University of Sciences and Technology (NUST)</br>
+                A* in FSc</br>
+                A* in Metric</br>
+          </p>
+          <button class="see-more">See More</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="content-text">
+          <h2>Skills</h2>
+          <p class="content-description">
+            <span style="font-weight:bold">Soft Skills</span></br>
+Multitasking</br>
+Communication Skills</br>
+Analytical Skills</br>
+Problem Solving Skills</br>
+Work Under Pressure</br>
+Teamworking</br>
+<span style="font-weight: bold">Technical Skills</span></br>
+MS PowerPoint, MS Word, MS Excel</br>
+Python, Java, C++, Julia</br>
+HTML, CSS/Tailwind, JavaScript, TypeScript</br>
+React, Node.js, Next.js</br>
+Django, MERN</br>
+XML, Android Studio</br>
+AI/ML, LLMs</br>
+Voice Over, Dubbing</br>
+Canva, Figma, UI/UX</br>
+AutoCAD, Visual Paradigm</br>
+MySQL, PostgreSQL, Matlab, Wireshark</br>
+Git, GitHub, Docker</br>
+WordPress, PHP, Shopify, SEO
+          </p>
+          <button class="see-more">See More</button>
+        </div>
+        <img src="images/skills.png" alt="Skills" class="content-image">
+      </div>
+
+      <div class="content">
+        <img src="images/awards.png" alt="Accolades" class="content-image">
+        <div class="content-text">
+          <h2>Accolades</h2>
+          <p class="content-description">
+            <span style="font-weight: bold">Python, Julia, ElevaTech</span></br>
+            NUST</br>
+            <span style="font-weight: bold">WordPress, SEO</span></br>
+            Virtual University, DigiSkills</br>
+            <span style="font-weight: bold">Graphic Design, Freelancing, Creative Writing</span></br>
+            Virtual University, DigiSkills</br>
+            <span style="font-weight: bold">Algebra</span></br>
+        Saylor Academy
+          </p>
+          <button class="see-more">See More</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="content-text">
+          <h2>Hobbies</h2>
+          <p class="content-description">
+                Digital Art </br>
+                Horse Riding </br>
+                Sports </br>
+                Reading </br>
+                Photography </br>
+                Voice Over
+          </p>
+          <button class="see-more">See More</button>
+        </div>
+        <img src="images/hobbies.png" alt="Hobbies" class="content-image">
+      </div>
+    </section>
+  </main>
+
+    <footer>
+        <p>&copy; All rights reserved.</p>
+    </footer>
+</body>
+</html>

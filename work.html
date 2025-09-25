@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #f5e1e2, #e8f3f4, #f1e9ed, #f1f4e9, #eaf1f4);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #a67b83;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: #a67b83;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+            padding: 10px 15px;
+            border-radius: 6px;
+            background-color: #d8a6ae;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links a:hover {
+            background-color: #a67b83;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            padding-top: 80px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        footer {
+            background: #a67b83;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            color: white;
+        }
+
+        /* Work Page Specific Styles */
+        .work-container {
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 1000px;
+        }
+
+        .work-item {
+            width: 45%;
+            background: #f9f2f3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .work-item h2 {
+            font-size: 2rem;
+            color: #a67b83;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .work-item img {
+            display: block;
+            margin: 0 auto 10px;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .testimonial-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #a67b83;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .testimonial-btn:hover {
+            background-color: #d8a6ae;
+        }
+
+        .testimonial-content {
+            display: none;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        .testimonial-content.active {
+            display: block;
+        }
+
+        .divider {
+            padding-bottom: 70px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.testimonial-btn');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling; // Select the sibling element
+                    content.classList.toggle('active'); // Toggle the 'active' class
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="./index.html" class="logo">Ysura Zainab</a>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="work-container">
+        <div class="work-item">
+            <h2>NUST Science Bee 11 Website</h2>
+            <img src="./images/Screenshot 2025-09-25 112451.png" alt="Project 1">
+            <button class="testimonial-btn">Testimonial</button>
+            <div class="testimonial-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <h2>RAISC - Sample Website</h2>
+            <img src="./images/Screenshot 2025-09-25 112451.png" alt="Project 2">
+            <button class="testimonial-btn">Testimonial</button>
+            <div class="testimonial-content">
+                <p>Proin scelerisque consequat mollis. Fusce sodales lacus ut pellentesque sollicitudin.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="work-container">
+        <div class="work-item">
+            <h2>AI Story Generator - Fable Frame</h2>
+            <img src="./images/Screenshot 2025-09-25 112451.png" alt="Project 1">
+            <button class="testimonial-btn">Testimonial</button>
+            <div class="testimonial-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <h2>Personal website for Noor Fatima (Architect)</h2>
+            <img src="./images/Screenshot 2025-09-25 112451.png" alt="Project 2">
+            <button class="testimonial-btn">Testimonial</button>
+            <div class="testimonial-content">
+                <p>Proin scelerisque consequat mollis. Fusce sodales lacus ut pellentesque sollicitudin.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+</main>
+
+<footer>
+    <p>&copy; All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

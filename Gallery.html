@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #f5e1e2, #e8f3f4, #f1e9ed, #f1f4e9, #eaf1f4);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #a67b83;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: #a67b83;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+            padding: 10px 15px;
+            border-radius: 6px;
+            background-color: #d8a6ae;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links a:hover {
+            background-color: #a67b83;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            padding-top: 80px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        footer {
+            background: #a67b83;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            color: white;
+        }
+
+        /* Gallery Page Specific Styles */
+        .Gallery-container {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .scrollbar-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+            background: #f9f2f3;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 1000px; /* Adjusted width */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scrollbar-container button {
+            padding: 10px 20px;
+            background-color: #a67b83;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .scrollbar-container button:hover {
+            background-color: #d8a6ae;
+        }
+
+        .content {
+            background: #f9f2f3;
+            display: none;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        function showContent(id) {
+            const content = document.getElementById(id);
+            const isActive = content.classList.contains('active');
+
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            if (!isActive) {
+                content.classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="./index.html" class="logo">Yusra Zainab</a>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="Gallery-container">
+        <div class="scrollbar-container">
+            <button onclick="showContent('content1')">🎨</button>
+            <button onclick="showContent('content2')">🖥️</button>
+            <button onclick="showContent('content3')">📸</button>
+        </div>
+        <div id="content1" class="content">
+            <h2>Urban</h2>
+            <p>In the quiet of night, with buildings silhouetted against the stars, I find clarity and inspiration in solitude.</p>
+            <img src="./images/art/nightbuilding.png" alt="Project 1 Image">
+        </div>
+        <div id="content2" class="content">
+            <h2>Fleur emportée par le vent.</h2>
+            <p>Amidst the wind's embrace, flowers sway gracefully, embodying the untamed spirit of freedom.</p>
+            <img src="./images/art/flower.png" alt="Project 2 Image">
+        </div>
+        <div id="content3" class="content">
+            <h2>Wallpaper Coded</h2>
+            <p>Exploring the intersection of technology and art, these wallpapers are a testament to creativity in the digital age.</p>
+            <img src="./images/wallpaper/Screenshot 2025-09-18 110942.png" alt="Project 3 Image">
+            <img src="./images/wallpaper/WhatsApp Image 2025-09-01 at 5.30.58 PM.jpeg" alt="Project 3 Image">
+            <img src="./images/wallpaper/WhatsApp Image 2025-09-03 at 5.33.40 PM.jpeg" alt="Project 3 Image">
+            <img src="./images/wallpaper/WhatsApp Image 2025-09-03 at 5.33.43 PM.jpeg" alt="Project 3 Image">
+            <img src="./images/wallpaper/WhatsApp Image 2025-09-09 at 11.51.30 PM.jpeg" alt="Project 3 Image">
+            <img src="./images/wallpaper/WhatsApp Image 2025-09-12 at 2.02.10 PM.jpeg" alt="Project 3 Image">
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; All rights reserved.</p>
+</footer>
+</body>
+</html>

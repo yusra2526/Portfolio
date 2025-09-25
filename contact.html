@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #f5e1e2, #e8f3f4, #f1e9ed, #f1f4e9, #eaf1f4);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: #a67b83;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+            padding: 10px 15px;
+            border-radius: 6px;
+            background-color: #d8a6ae;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links a:hover {
+            background-color: #a67b83;
+        }
+  
+        a{
+          text-decoration: none;
+          color: #a67b83;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            padding-top: 80px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        footer {
+            background: #a67b83;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            color: white;
+        }
+
+        /* Contact Page Specific Styles */
+        .contact-container {
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: #f9f2f3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #a67b83;
+            width: 800px;
+            padding-bottom: 30px;
+        }
+
+        .contact-info {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .contact-info h2 {
+            font-size: 3rem;
+            color: #a67b83;
+            padding-top: 50px;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        .icons {
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icons img {
+            width: 30px;
+            height: auto;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #a67b83;
+        }
+
+        .contact-form button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #a67b83;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #d8a6ae;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="./index.html" class="logo">Yusra Zainab</a>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="contact-container">
+        <div class="contact-info">
+            <h2>Contact</h2>
+            <div class="icons">
+                <div class="icon-item">
+                    <img src="images/icons/phone.png" alt="Phone">
+                    <a href="tel:+1234567890">+1234567890</a>
+                </div>
+                <div class="icon-item">
+                    <img src="images/icons/insta.png" alt="Insta">
+                    <a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a>
+                </div>
+                <div class="icon-item">
+                    <img src="images/icons/link.png" alt="Linkedin">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form action="mailto: #" method="post" enctype="text/plain">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; All rights reserved.</p>
+</footer>
+</body>
+</html>

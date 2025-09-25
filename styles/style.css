@@ -1,0 +1,88 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #f5e1e2, #e8f3f4, #f1e9ed, #f1f4e9, #eaf1f4);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #a67b83;
+}
+header {
+  position: fixed; top: 0; width: 100%;
+  background: #a67b83; color: white; padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 1000;
+}
+nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 0 20px; }
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 20px; }
+.nav-links a {
+  color: white; text-decoration: none; font-size: 1rem; padding: 10px 15px;
+  border-radius: 6px; background-color: #d8a6ae; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nav-links a:hover { background-color: #a67b83; }
+.logo { font-size: 1.5rem; font-weight: bold; color: white; }
+main { flex: 1; padding-top: 80px; max-width: 1200px; margin: auto; padding: 20px; }
+
+.punchline { text-align: center; margin: 50px 0; }
+.punchline h1 { font-size: 3rem; color: #a67b83; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+.content-blocks .content {
+  display: flex; align-items: center; justify-content: center;
+  margin: 20px auto; background: #f9f2f3; padding: 20px; border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 1000px; max-width: 100%;
+  transition: transform 0.3s; text-align: center;
+}
+.content:hover { transform: scale(1.02); }
+.content-image { flex: 1; max-width: 300px; margin-right: 20px; border-radius: 12px; }
+.content-text { flex: 2; }
+.content-text h2 { font-size: 2.5rem; margin-bottom: 10px; color: #a67b83; }
+.content-description { display: none; font-size: 1.1rem; color: #666; }
+.content-description.visible { display: block; }
+.see-more {
+  background-color: #d8a6ae; color: white; border: none; padding: 10px 15px;
+  border-radius: 6px; cursor: pointer; margin-top: 10px;
+}
+.see-more:hover { background-color: #a67b83; }
+
+.heading { text-align: center; font-size: 3rem; color: #a67b83; margin: 40px 0 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+.Gallery-container { text-align: center; margin-bottom: 40px; }
+.scrollbar-container {
+  display: flex; gap: 10px; padding: 10px; justify-content: center;
+  background: #f9f2f3; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;
+}
+.scrollbar-container button {
+  padding: 10px 20px; background-color: #a67b83; color: white; border: none; border-radius: 4px; cursor: pointer;
+}
+.scrollbar-container button:hover { background-color: #d8a6ae; }
+#Gallery .content { display: none; padding: 20px; background: #f9f2f3; border-radius: 8px; }
+#Gallery .content.active { display: block; }
+#Gallery img { max-width: 600px; width: 100%; border-radius: 8px; }
+
+.work-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 40px; }
+.work-item { flex: 0 1 45%; background: #f9f2f3; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.work-item h2 { font-size: 2rem; color: #a67b83; margin-bottom: 10px; text-align: center; }
+.work-item img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
+.testimonial-btn { display: block; margin: auto; padding: 10px 20px; background-color: #a67b83; color: white; border: none; border-radius: 4px; cursor: pointer; }
+.testimonial-btn:hover { background-color: #d8a6ae; }
+.testimonial-content { display: none; margin-top: 10px; }
+.testimonial-content.active { display: block; }
+
+.contact-container { display: flex; gap: 40px; background: #f9f2f3; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 40px; }
+.icons { display: flex; flex-direction: column; gap: 15px; }
+.icon-item { display: flex; align-items: center; gap: 10px; }
+.icon-item img { width: 30px; }
+.contact-form { flex: 1; }
+.contact-form label { font-weight: bold; margin-top: 10px; }
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-top: 5px; color: #a67b83;
+}
+.contact-form button { margin-top: 15px; padding: 10px; background-color: #a67b83; color: white; border: none; border-radius: 4px; cursor: pointer; }
+.contact-form button:hover { background-color: #d8a6ae; }
+
+footer {
+  background: #a67b83; color: white; text-align: center; padding: 10px 0;
+  position: fixed; bottom: 0; width: 100%; box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+footer p { margin: 0; }
